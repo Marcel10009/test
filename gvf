@@ -1,0 +1,9 @@
+_G.autorebirth = false;
+
+spawn(function()
+    while _G.autorebirth == true do
+        local args = {[1] = 8,[2] = false}
+        game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.Rebirth:InvokeServer(unpack(args))
+        wait()
+    end
+end)
