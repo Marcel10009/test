@@ -1,0 +1,9 @@
+_G.autoprestige = true;
+
+spawn(function()
+    while _G.autoprestige == true do
+        local args = {[1] = 1,[2] = true}
+        game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PrestigeService.Prestige:InvokeServer(unpack(args))
+        wait()
+    end
+end)
